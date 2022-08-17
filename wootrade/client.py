@@ -182,6 +182,9 @@ class Client(BaseClient):
 
     def get_market_trades(self, **params) -> Dict:
         return self._get("public/market_trades", **params)
+        
+    def get_all_position_info(self) -> Dict:
+        return self._get("positions", True)
 
 
 class AsyncClient(BaseClient):
